@@ -9,4 +9,10 @@ test('can login', function () {
     } else {
         $this->assertTrue(false);
     }
+    if ($login->getUser()->username == config('aaf-radius.testuser')) {
+        $this->assertTrue(true);
+    } else {
+        $this->assertTrue(false);
+    }
 });
+
