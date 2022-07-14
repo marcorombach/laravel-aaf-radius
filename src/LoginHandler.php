@@ -35,5 +35,11 @@ class LoginHandler
         }
         Log::info("AAF-RADIUS: Logging In");
         Auth::login($user);
+
+        if(Auth::check()){
+            return true;
+        }else{
+            return false;
+        }
     }
 }
