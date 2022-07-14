@@ -36,7 +36,7 @@ class LoginHandler
         Log::info("AAF-RADIUS: Logging In");
         Auth::login($user);
 
-        Log::info("AAF-RADIUS: Session - " . session()->all());
+        Log::info("AAF-RADIUS: Session - " . json_encode(session()->all()));
 
         if(Auth::check()){
             return true;
