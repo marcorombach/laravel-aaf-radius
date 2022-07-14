@@ -12,6 +12,7 @@ class LaravelAafRadiusServiceProvider extends PackageServiceProvider
     {
         $package
             ->name('laravel-aaf-radius')
+            ->hasRoute('web')
             ->hasConfigFile();
     }
 }
