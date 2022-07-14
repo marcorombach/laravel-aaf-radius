@@ -14,6 +14,11 @@ class LaravelAafRadius extends Controller
     use AuthorizesRequests, ValidatesRequests;
     const TIMEOUT = 45;
 
+    public function __construct()
+    {
+        $this->middleware('web');
+    }
+
     function authenticate($username, $password){
 
         $radius = new Radius();
