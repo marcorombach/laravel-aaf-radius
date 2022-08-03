@@ -1,0 +1,43 @@
+{
+    "name": "marcorombach/laravel-aaf-radius",
+    "description": "This is my package laravel-aaf-radius",
+    "keywords": [
+        "marcorombach",
+        "laravel",
+        "laravel-aaf-radius"
+    ],
+    "homepage": "https://github.com/marcorombach/laravel-aaf-radius",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Marco Rombach",
+            "email": "marco@marcorombach.de",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "spatie/laravel-package-tools": "^1.9.2",
+        "illuminate/contracts": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Marcorombach\\LaravelAafRadius\\": "src"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Marcorombach\\LaravelAafRadius\\LaravelAafRadiusServiceProvider"
+            ],
+            "aliases": {
+                "LaravelAafRadius": "Marcorombach\\LaravelAafRadius\\Facades\\LaravelAafRadius"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
