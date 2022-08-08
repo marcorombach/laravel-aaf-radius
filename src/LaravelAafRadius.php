@@ -4,10 +4,7 @@ namespace Marcorombach\LaravelAafRadius;
 
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Validation\ValidatesRequests;
-use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
-use Illuminate\Support\Arr;
-use Illuminate\Support\Facades\Log;
 
 class LaravelAafRadius extends Controller
 {
@@ -44,6 +41,6 @@ class LaravelAafRadius extends Controller
         if(config('aaf-radius.error-route') != ''){
             return redirect()->route(config('aaf-radius.error-route'))->with(['error' => 'Authentication failed']);
         }
-        return redirect(url('/'));
+        return redirect(url('/'))->with(['error' => 'Authentication failed']);
     }
 }
