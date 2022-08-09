@@ -1,6 +1,6 @@
 {
     "name": "marcorombach/laravel-aaf-radius",
-    "description": "This is my package laravel-aaf-radius",
+    "description": "RADIUS Module for Laravel and AAF RADIUS Server",
     "keywords": [
         "marcorombach",
         "laravel",
@@ -17,27 +17,20 @@
     ],
     "require": {
         "php": "^8.0",
-        "spatie/laravel-package-tools": "^1.9.2",
-        "laravel/framework": "^9.0"
+        "laravel/framework": "^9.0",
+        "dapphp/radius": "^3.0",
+        "spatie/laravel-package-tools": "^1.9.2"
     },
     "autoload": {
         "psr-4": {
             "Marcorombach\\LaravelAafRadius\\": "src"
         }
     },
-    "config": {
-        "sort-packages": true
-    },
     "extra": {
         "laravel": {
             "providers": [
                 "Marcorombach\\LaravelAafRadius\\LaravelAafRadiusServiceProvider"
-            ],
-            "aliases": {
-                "LaravelAafRadius": "Marcorombach\\LaravelAafRadius\\Facades\\LaravelAafRadius"
-            }
+            ]
         }
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true
+    }
 }
