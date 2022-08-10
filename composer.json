@@ -16,8 +16,8 @@
         }
     ],
     "require": {
-        "php": "^7.4",
-        "laravel/framework": "^8.0",
+        "php": ">=7.4",
+        "laravel/framework": ">=8.0",
         "dapphp/radius": "^3.0",
         "spatie/laravel-package-tools": "^1.9.2"
     },
