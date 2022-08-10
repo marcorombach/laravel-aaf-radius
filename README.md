@@ -1,6 +1,7 @@
 # laravel-aaf-radius
 
-Simple Radius Authentication for 2FA Radius Servers like NetIQ AAF
+Simple Radius Authentication for 2FA Radius Servers like NetIQ AAF.
+To use this package, the Laravel User Model needs at least a field named username.
 
 ## Installation
 
