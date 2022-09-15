@@ -2,7 +2,10 @@
 
 Simple Radius Authentication for 2FA Radius Servers like NetIQ AAF.
 To use this package, the Laravel User Model needs at least a field named username.
+It's recommended to define a post login route and a error route.
+The error route is called with a flashed session variable (session('error')) containing information to display.
 
+To configure this package with NetIQ Advanced Authentication, the NAS (RADIUS Client) has to be registered on the RADIUS Policy page. 
 ## Installation
 
 Install the package via composer:
@@ -38,8 +41,12 @@ $radius = new LaravelAafRadius();
 return $radius->authenticate($request->username, $request->password);
 ```
 
+## Requirements
+
+- PHP 7.4 or greater
+- Laravel 8.0 or greater
 
 ## Credits
-
+- [dapphp - RADIUS](https://github.com/dapphp/radius)
 - [Marco Rombach](https://github.com/marcorombach)
-- Uses parts of https://github.com/dapphp/radius
+
